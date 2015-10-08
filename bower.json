@@ -1,0 +1,21 @@
+{
+  "name": "angularjs-typescript",
+  "version": "0.1.0",
+  "homepage": "",
+  "authors": [
+    "Toshimitsu Nishimaki"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "angular": "1.2.8",
+    "angular-route": "1.2.8"
+  }
+}

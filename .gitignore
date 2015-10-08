@@ -1,0 +1,14 @@
+.DS_Store
+node_modules
+components
+bower_components
+public/components
+public/bower
+bower
+public/lib
+*.js.map
+*.map
+*.css
+public/app/types
+server/types
+*.subl*
