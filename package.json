@@ -31,6 +31,7 @@
     "grunt-nodemon": "^0.4.0",
     "grunt-typescript": "^0.7.0",
     "less": "^2.5.3",
-    "mocha": "^2.3.3"
+    "mocha": "^2.3.3",
+    "tsd": "^0.6.5"
   }
 }

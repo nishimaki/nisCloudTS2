@@ -10,7 +10,7 @@ module.exports = function(grunt) {
       bower: { cmd: 'bower install'},
       server: { cmd: 'node server/server.js' },
       tsServer: { cmd: 'node_modules/.bin/tsc server/server.ts -m commonjs -t ES5'},
-      tsPublic: { cmd: 'node_modules/.bin/tsc public/js/app.ts public/js/**/*.ts -t ES5'},
+      //tsPublic: { cmd: 'node_modules/.bin/tsc public/js/app.ts public/js/**/*.ts -t ES5'},
     },
 
     less: {
@@ -60,6 +60,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
 
   // Default task(s).
-  grunt.registerTask('default', ['exec:tsServer', 'exec:tsPublic', 'develop', 'watch'])
+  //grunt.registerTask('default', ['exec:bower','exec:tsServer', 'exec:tsPublic', 'develop', 'watch'])
+  grunt.registerTask('default', ['exec:bower','exec:tsServer', 'develop', 'watch'])
   
 };

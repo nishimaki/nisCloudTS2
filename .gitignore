@@ -12,3 +12,4 @@ public/lib
 public/app/types
 server/types
 *.subl*
+*.pem

@@ -1,5 +1,4 @@
-/// <reference path='./types/node/node.d.ts' />
-/// <reference path='./types/express/express.d.ts' />
+/// <reference path='./tsd.d.ts' />
 
 var PORT = process.env.PORT || 3000
 import express = require('express')
@@ -9,7 +8,7 @@ var path = require('path')
 export var app = express()
 
 app.use(express.static(__dirname + '/../public'))
-//app.use(express.bodyParser())
+app.use(express.bodyParser())
 
 var server = http.createServer(app)
 server.listen(PORT)
