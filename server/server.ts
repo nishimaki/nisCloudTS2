@@ -1,6 +1,6 @@
 /// <reference path='./tsd.d.ts' />
 
-var PORT = process.env.PORT || 3000
+var PORT = process.env.PORT || 8080
 import express = require('express')
 import http = require('http')
 var path = require('path') 

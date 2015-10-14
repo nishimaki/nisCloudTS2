@@ -1,2 +1,16 @@
-//
-var a = 10;
+/// <reference path="types.ts"/>
+var todomvc = angular.module('todomvc', ['ngRoute'])
+    .config(function ($routeProvider) {
+    $routeProvider.when('/', {
+        controller: 'TodoCtrl',
+        templateUrl: 'todomvc-index.html'
+    }).when('/nis/', {
+        controller: 'NisCtrl',
+        templateUrl: 'nis-index.html'
+    }).when('/:status', {
+        controller: 'TodoCtrl',
+        templateUrl: 'todomvc-index.html'
+    }).otherwise({
+        redirectTo: '/'
+    });
+});

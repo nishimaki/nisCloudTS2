@@ -8,10 +8,38 @@ module.exports = function(grunt) {
       // submodules: { cmd: 'git submodule update --init' },
       npm: { cmd: 'npm install' },
       bower: { cmd: 'bower install'},
+      tsd: { cmd: 'tsd reinstall'},
       server: { cmd: 'node server/server.js' },
       tsServer: { cmd: 'node_modules/.bin/tsc server/server.ts -m commonjs -t ES5'},
-      //tsPublic: { cmd: 'node_modules/.bin/tsc public/js/app.ts public/js/**/*.ts -t ES5'},
+      tsPublic: { cmd: 'node_modules/.bin/tsc public/js/app.ts public/js/**/*.ts -t ES5'},
     },
+
+    tsd: {
+        refresh: {
+            options: {
+                // execute a command
+                command: 'reinstall',
+
+                //optional: always get from HEAD
+                latest: true,
+
+                // specify config file
+                config: 'tsd.json',
+
+                // experimental: options to pass to tsd.API
+                opts: {
+                    // props from tsd.Options
+                }
+            }
+        }
+    },
+
+    // copy: {
+    //   main: {
+    //     src: 'typings/**/*.ts',
+    //     dest: 'public/',
+    //   },
+    // },
 
     less: {
       development: {
@@ -58,9 +86,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch')
   grunt.loadNpmTasks('grunt-develop')
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-tsd');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Default task(s).
-  //grunt.registerTask('default', ['exec:bower','exec:tsServer', 'exec:tsPublic', 'develop', 'watch'])
-  grunt.registerTask('default', ['exec:bower','exec:tsServer', 'develop', 'watch'])
+  grunt.registerTask('default', ['exec:bower','exec:tsServer', 'exec:tsPublic', 'watch'])
+  //grunt.registerTask('default', ['copy', 'exec:bower','exec:tsServer', 'exec:tsPublic', 'develop', 'watch'])
+  //grunt.registerTask('default', ['copy', 'exec:bower','exec:tsServer', 'develop', 'watch'])
   
 };
