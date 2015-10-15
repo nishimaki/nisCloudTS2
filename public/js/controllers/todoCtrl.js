@@ -3,7 +3,7 @@
  * - retrieves and persists the model via the todoStorage service
  * - exposes the model to the template and provides event handlers
  */
-todomvc.controller('TodoCtrl', function TodoCtrl($scope, $routeParams, todoStorage, filterFilter) {
+nisApp.controller('TodoCtrl', function TodoCtrl($scope, $routeParams, todoStorage, filterFilter) {
     var todos = $scope.todos = todoStorage.get();
     $scope.newTodo = "";
     $scope.editedTodo = null;

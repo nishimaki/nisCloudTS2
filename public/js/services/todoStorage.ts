@@ -19,4 +19,4 @@ class TodoStorage {
     }
 }
 
-todomvc.service('todoStorage', TodoStorage)
+nisApp.service('todoStorage', TodoStorage)

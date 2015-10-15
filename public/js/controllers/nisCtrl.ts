@@ -12,7 +12,7 @@ interface NisCtrlRouteParams {
  * - retrieves and persists the model via the todoStorage service
  * - exposes the model to the template and provides event handlers
  */
-todomvc.controller('NisCtrl', function NisCtrl($scope:NisCtrlScope, $routeParams:NisCtrlRouteParams) {
+nisApp.controller('NisCtrl', function NisCtrl($scope:NisCtrlScope, $routeParams:NisCtrlRouteParams) {
 
     $scope.newTodo = ""
 });

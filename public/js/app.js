@@ -1,5 +1,5 @@
 /// <reference path="types.ts"/>
-var todomvc = angular.module('todomvc', ['ngRoute'])
+var nisApp = angular.module('nisApp', ['ngRoute'])
     .config(function ($routeProvider) {
     $routeProvider.when('/', {
         controller: 'TodoCtrl',

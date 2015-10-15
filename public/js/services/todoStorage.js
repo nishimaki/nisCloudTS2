@@ -14,4 +14,4 @@ var TodoStorage = (function () {
     TodoStorage.STORAGE_ID = 'todos-angularjs';
     return TodoStorage;
 })();
-todomvc.service('todoStorage', TodoStorage);
+nisApp.service('todoStorage', TodoStorage);
